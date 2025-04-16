@@ -1,5 +1,5 @@
 
-import './Header.css';
+import './styles/Header.css';
 
 type HeaderParams = {
   title: string;
