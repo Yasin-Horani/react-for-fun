@@ -1,6 +1,6 @@
-import "./styles/Posts.css";
+import "./styles/Post.css";
 
-function Posts() {
+function Post() {
   return (
     <div className="posts">
       <h2>This is the Post Title</h2>
@@ -10,4 +10,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default Post;
