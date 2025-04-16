@@ -1,11 +1,16 @@
 import "./App.css";
 import Header from "./components/Header"; // assuming it's in the same directory
+import Posts from "./components/Post";
 
 function App() {
   return (
     <div className="App">
       <Header title="El-SooN.." />
-      <h1>hello</h1>
+      <Posts />
+      <Posts />
+      <Posts />
+      <Posts />
+      <Posts />
     </div>
   );
 }
