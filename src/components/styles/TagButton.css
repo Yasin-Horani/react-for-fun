@@ -1,0 +1,11 @@
+.tag-button{
+    margin: 3vh;
+    padding: 10px;
+    width: 20vw;
+}
+.tag-button button{
+    background-color: blueviolet;
+    border-radius: 55px;
+    color: #ffffff;
+    width: 50%;
+}

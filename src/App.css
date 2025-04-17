@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    gap: 20px; /* space between posts and tags */
+    padding: 20px;
+  }
+  
+  .posts-containe {
+    flex: 3; /* take more space */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .tags {
+    margin: 3vh;
+    flex: 1; /* take less space */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    flex: wrap;
+    border: 3px solid #007374;
+  }
+  
