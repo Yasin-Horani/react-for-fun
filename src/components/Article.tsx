@@ -1,5 +1,14 @@
+import { title } from "process";
 import "./styles/Article.css";
-function Article() {
+
+type ArticleProps = {
+  title: string;
+  name: string;
+  email: string;
+  year: number;
+  content?: string;
+};
+function Article(props: ArticleProps) {
   return (
     <>
       <div
@@ -9,15 +18,12 @@ function Article() {
           boxShadow: "0px 0px 10px 0px black",
         }}
       >
-        <h1>Article</h1>  
-        <h3>Yasin</h3>
-        <h3>Yasin@gmail.com</h3>
-        <h3>1996</h3>
+        <h1>{props.title}</h1>
+        <h3>{props.name}</h3>
+        <h3>{props.email}</h3>
+        <h3>{props.year}</h3>
         <hr />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-          pariatur qui doloribus animi.
-        </p>
+        <p>{props.content}</p>
       </div>
     </>
   );

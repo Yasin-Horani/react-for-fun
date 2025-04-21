@@ -6,20 +6,26 @@ function App() {
     <div className="App">
       <Header title="El-SooN.." />
       <div className="container">
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
+        <Article
+          title="Back-end Developer"
+          name="Yasin"
+          email="Yasin@gmail.com"
+          year={1996}
+          content="I love Java"
+        />
+        <Article
+          title="Front-End Developer"
+          name="Thomas"
+          email="Thomas@gmail.com"
+          year={1995}
+          content="I love Javascrip"
+        />
+        <Article
+          title="Not a Developer"
+          name="Yoshi"
+          email="Yoshi@gmail.com"
+          year={1995}
+        />
       </div>
     </div>
   );
