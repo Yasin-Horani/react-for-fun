@@ -1,24 +1,6 @@
 .container {
-    display: flex;
-    gap: 20px; 
-    padding: 20px;
-  }
-  
-  .posts-containe {
-    flex: 3; 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .tags {
-    margin: 3vh;
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    display: flex;
-    flex: wrap;
-    border: 3px solid #016e70;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
