@@ -8,7 +8,9 @@ type ArticleProps = {
   year: number;
   content?: string;
 };
+
 function Article(props: ArticleProps) {
+  const { title, name, email, year, content } = props;
   return (
     <>
       <div
@@ -18,12 +20,12 @@ function Article(props: ArticleProps) {
           boxShadow: "0px 0px 10px 0px black",
         }}
       >
-        <h1>{props.title}</h1>
-        <h3>{props.name}</h3>
-        <h3>{props.email}</h3>
-        <h3>{props.year}</h3>
+        <h1>{title}</h1>
+        <h3>{name}</h3>
+        <h3>{email}</h3>
+        <h3>{year}</h3>
         <hr />
-        <p>{props.content}</p>
+        <p>{content}</p>
       </div>
     </>
   );
