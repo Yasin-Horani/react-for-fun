@@ -29,7 +29,6 @@ const articles = [
     name: "Yoshi",
     email: "Yoshi@gmail.com",
     year: 1995,
-    content: "I love JavaScript",
   },
 ];
 

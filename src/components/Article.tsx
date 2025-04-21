@@ -10,7 +10,7 @@ type ArticleProps = {
 };
 
 function Article(props: ArticleProps) {
-  const { title, name, email, year, content } = props;
+  const { title, name, email, year, content="No Content" } = props;
   return (
     <>
       <div
