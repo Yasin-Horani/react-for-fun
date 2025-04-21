@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Article from "./components/Article";
+import TagButton from "./components/TagButton";
 
 const articles = [
   {
@@ -37,16 +38,25 @@ function App() {
     <div className="App">
       <Header title="El-SooN.." />
       <div className="container">
-        {articles.map((article, index) => (
-          <Article
-            key={index}
-            title={article.title}
-            name={article.name}
-            email={article.email}
-            year={article.year}
-            content={article.content}
-          />
-        ))}
+        <div className="articles">
+          {articles.map((article, index) => (
+            <Article
+              key={index}
+              title={article.title}
+              name={article.name}
+              email={article.email}
+              year={article.year}
+              content={article.content}
+            />
+          ))}
+        </div>
+        <div className="buttons">
+          <TagButton />
+          <TagButton />
+          <TagButton />
+          <TagButton />
+          <TagButton />
+        </div>
       </div>
     </div>
   );

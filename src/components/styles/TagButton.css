@@ -1,11 +1,14 @@
+
 .tag-button{
-    margin: 3vh;
-    padding: 10px;
-    width: 20vw;
+    margin-top: 10px;
+
 }
 .tag-button button{
     background-color: blueviolet;
-    border-radius: 55px;
     color: #ffffff;
-    width: 50%;
+    width: 150px;
+}
+.tag-button button:hover{
+    background-color: #ffffff;
+    color: #8a2be2;
 }
