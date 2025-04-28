@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Article from "./components/Article";
 import TagButton from "./components/TagButton";
 import MyButton from "./components/MyButton";
+import MyInput from "./components/MyInput";
 
 const articles = [
   {
@@ -35,7 +36,7 @@ const articles = [
 ];
 
 const buttons = [
-  { 
+  {
     id: 1,
     tagName: "button 1",
   },
@@ -55,7 +56,8 @@ const buttons = [
     id: 5,
     tagName: "syrian flag",
     className: "syrianFlag",
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fflagmakers.co.uk%2Fmedia%2Fg0ddkbjp%2F1932-1958_1961-1963.png%3Fanchor%3Dcenter%26mode%3Dcrop%26width%3D1530%26height%3D0%26rnd%3D132439467255100000&f=1&nofb=1&ipt=4f4304b985dc1fe9d6d1e6a6974db437af3eddbec1459153b6b60fff129c4c58",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fflagmakers.co.uk%2Fmedia%2Fg0ddkbjp%2F1932-1958_1961-1963.png%3Fanchor%3Dcenter%26mode%3Dcrop%26width%3D1530%26height%3D0%26rnd%3D132439467255100000&f=1&nofb=1&ipt=4f4304b985dc1fe9d6d1e6a6974db437af3eddbec1459153b6b60fff129c4c58",
   },
   {
     id: 6,
@@ -89,11 +91,16 @@ function App() {
               image={button.image}
             />
           ))}
-
+          <div>
+            <>
+              <MyButton />
+            </>
+  
+            <>
+              <MyInput />
+            </>
+          </div>
         </div>
-        <>
-          <MyButton/>
-        </>
       </div>
     </div>
   );
