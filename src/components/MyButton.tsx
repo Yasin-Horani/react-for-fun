@@ -9,10 +9,10 @@ function MyButton() {
     }
   }
   return (
-    <>
+    <div style={{ marginTop: "20px" }}>
       <button onClick={handleClick}>Click me!</button>
       <strong>{name}</strong>
-    </>
+    </div>
   );
 }
 
