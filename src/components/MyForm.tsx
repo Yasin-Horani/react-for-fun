@@ -19,39 +19,44 @@ function MyForm() {
   }
 
   return (
-    <form
-      style={{
-        border: "2px solid red",
-        marginTop: "20px",
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        gap: "10px",
-      }}
-      onSubmit={handleSubmit}
-    >
-      <label style={{ display: "flex", flexDirection: "column" }}>
-        Name:
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-      </label>
-      <label style={{ display: "flex", flexDirection: "column" }}>
-        Email:
-        <input
-          type="text"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </label>
-      <button style={{ width: "100px", marginTop: "10px" }} type="submit">
-        Submit
-      </button>
-    </form>
+    <>
+      <form
+        style={{
+          border: "2px solid red",
+          marginTop: "20px",
+          padding: "20px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+        }}
+        onSubmit={handleSubmit}
+      >
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </label>
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          Email:
+          <input
+            type="text"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </label>
+        <button style={{ width: "100px", marginTop: "10px" }} type="submit">
+          Submit
+        </button>
+      </form>
+      <h1>
+        {formData.name} {formData.email}
+      </h1>
+    </>
   );
 }
 
