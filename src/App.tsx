@@ -4,6 +4,7 @@ import Article from "./components/Article";
 import TagButton from "./components/TagButton";
 import MyButton from "./components/MyButton";
 import MyInput from "./components/MyInput";
+import MyForm from "./components/MyForm";
 
 const articles = [
   {
@@ -98,6 +99,9 @@ function App() {
   
             <>
               <MyInput />
+            </>
+            <>
+              <MyForm />
             </>
           </div>
         </div>
