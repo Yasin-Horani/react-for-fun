@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Article from "./components/Article";
 import TagButton from "./components/TagButton";
-import { idText } from "typescript";
+import MyButton from "./components/MyButton";
 
 const articles = [
   {
@@ -91,6 +91,9 @@ function App() {
           ))}
 
         </div>
+        <>
+          <MyButton/>
+        </>
       </div>
     </div>
   );
