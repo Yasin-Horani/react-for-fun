@@ -53,9 +53,10 @@ function MyForm() {
           Submit
         </button>
       </form>
-      <h1>
+      <strong>
+        form data:
         {formData.name} {formData.email}
-      </h1>
+      </strong>
     </>
   );
 }
