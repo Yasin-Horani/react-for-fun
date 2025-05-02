@@ -62,7 +62,10 @@ const buttons = [
   },
   {
     id: 6,
-    tagName: "button 6",
+    tagName: "syrian flag",
+    className: "syrianFlag",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-BIRW4ypbSSY%2FUmLb-ZfBV9I%2FAAAAAAAAIc8%2FDpYuwlMfyjg%2Fs1600%2Fwallpaper%2Bbackground%2Bimage%2Bof%2BSyrian%2Bflag.jpg&f=1&nofb=1&ipt=0ca375c3ec1c7a376c37b945f4a7fb5efd86a87b89c1a996e943478db730165c",
   },
 ];
 
