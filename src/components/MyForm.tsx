@@ -7,6 +7,7 @@ function MyForm() {
     age: 0,
     generalInfo: "",
     isAdult: false,
+    country: "Syria",
   });
 
   return (
@@ -75,11 +76,44 @@ function MyForm() {
             type="checkbox"
             name="adultCheck"
             checked={formInput.isAdult}
-            onChange={(e) =>
-              setFormInput({ ...formInput, isAdult: e.target.checked }) // checked is a boolean
+            onChange={
+              (e) => setFormInput({ ...formInput, isAdult: e.target.checked }) // checked is a boolean
             }
           />
         </label>
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          select your favorite country:
+          <select
+            value={formInput.country}
+            onChange={(event) =>
+              setFormInput({ ...formInput, country: event.target.value })
+            }
+            name="country"
+            id="country"
+          >
+            <option value="Syria">Syria</option>
+            <option value="Soria">Soria</option>
+            <option value="Shaam">Bilad AL Shaam</option>
+          </select>
+        </label>
+
+          <label style={{ display: "flex", flexDirection: "column" }}>
+          select your favorite country:
+          <select
+            value={formInput.country}
+            onChange={(event) =>
+              setFormInput({ ...formInput, country: event.target.value })
+            }
+            name="country"
+            id="country"
+          >
+            <option value="Syria">Syria</option>
+            <option value="Soria">Soria</option>
+            <option value="Shaam">Bilad AL Shaam</option>
+          </select>
+        </label>
+
+      <hr />
 
         <button style={{ width: "100px", marginTop: "10px" }} type="submit">
           Submit
