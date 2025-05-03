@@ -76,7 +76,7 @@ function MyForm() {
             name="adultCheck"
             checked={formInput.isAdult}
             onChange={(e) =>
-              setFormInput({ ...formInput, isAdult: e.target.checked })
+              setFormInput({ ...formInput, isAdult: e.target.checked }) // checked is a boolean
             }
           />
         </label>
