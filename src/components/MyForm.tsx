@@ -6,6 +6,7 @@ function MyForm() {
     email: "",
     age: 0,
     generalInfo: "",
+    isAdult: false,
   });
 
   return (
@@ -59,22 +60,31 @@ function MyForm() {
         </label>
         <label style={{ display: "flex", flexDirection: "column" }}>
           General Info:
-        </label>
-        <textarea
+          <textarea
             name="generalInfo"
             value={formInput.generalInfo}
             onChange={(e) =>
               setFormInput({ ...formInput, generalInfo: e.target.value })
             }
           ></textarea>
+        </label>
+        <hr />
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          are you 18 or older?
+          <input
+            type="checkbox"
+            name="adultCheck"
+            checked={formInput.isAdult}
+            onChange={(e) =>
+              setFormInput({ ...formInput, isAdult: e.target.checked })
+            }
+          />
+        </label>
+
         <button style={{ width: "100px", marginTop: "10px" }} type="submit">
           Submit
         </button>
       </form>
-      <strong>
-        form data:
-        {formInput.name} {formInput.email} {formInput.age} {formInput.generalInfo}
-      </strong>
     </>
   );
 }
