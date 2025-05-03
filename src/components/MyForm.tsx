@@ -5,6 +5,7 @@ function MyForm() {
     name: "",
     email: "",
     age: 0,
+    generalInfo: "",
   });
 
   return (
@@ -56,13 +57,23 @@ function MyForm() {
             }
           />
         </label>
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          General Info:
+        </label>
+        <textarea
+            name="generalInfo"
+            value={formInput.generalInfo}
+            onChange={(e) =>
+              setFormInput({ ...formInput, generalInfo: e.target.value })
+            }
+          ></textarea>
         <button style={{ width: "100px", marginTop: "10px" }} type="submit">
           Submit
         </button>
       </form>
       <strong>
         form data:
-        {formInput.name} {formInput.email} {formInput.age}
+        {formInput.name} {formInput.email} {formInput.age} {formInput.generalInfo}
       </strong>
     </>
   );
