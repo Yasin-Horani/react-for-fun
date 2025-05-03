@@ -1,22 +1,11 @@
 import { useState } from "react";
 
 function MyForm() {
-  const [formData, setFormData] = useState({
+  const [formInput, setFormInput] = useState({
     name: "",
     email: "",
+    age: 0,
   });
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  }
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    console.log(formData);
-  }
 
   return (
     <>
@@ -29,15 +18,20 @@ function MyForm() {
           flexDirection: "column",
           gap: "10px",
         }}
-        onSubmit={handleSubmit}
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log(formInput);
+        }}
       >
         <label style={{ display: "flex", flexDirection: "column" }}>
           Name:
           <input
             type="text"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            value={formInput.name}
+            onChange={(e) =>
+              setFormInput({ ...formInput, name: e.target.value })
+            }
           />
         </label>
         <label style={{ display: "flex", flexDirection: "column" }}>
@@ -45,8 +39,21 @@ function MyForm() {
           <input
             type="text"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={formInput.email}
+            onChange={(e) =>
+              setFormInput({ ...formInput, email: e.target.value })
+            }
+          />
+        </label>
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          Age:
+          <input
+            type="text"
+            name="age"
+            value={formInput.age}
+            onChange={(e) =>
+              setFormInput({ ...formInput, age: Number(e.target.value) })
+            }
           />
         </label>
         <button style={{ width: "100px", marginTop: "10px" }} type="submit">
@@ -55,7 +62,7 @@ function MyForm() {
       </form>
       <strong>
         form data:
-        {formData.name} {formData.email}
+        {formInput.name} {formInput.email} {formInput.age}
       </strong>
     </>
   );
