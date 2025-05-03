@@ -8,6 +8,7 @@ function MyForm() {
     generalInfo: "",
     isAdult: false,
     country: "Syria",
+    city: "Damascus",
   });
 
   return (
@@ -97,24 +98,47 @@ function MyForm() {
           </select>
         </label>
 
-          <label style={{ display: "flex", flexDirection: "column" }}>
-          select your favorite country:
-          <select
-            value={formInput.country}
-            onChange={(event) =>
-              setFormInput({ ...formInput, country: event.target.value })
-            }
-            name="country"
-            id="country"
-          >
-            <option value="Syria">Syria</option>
-            <option value="Soria">Soria</option>
-            <option value="Shaam">Bilad AL Shaam</option>
-          </select>
+        <hr />
+
+        <label style={{ display: "flex", flexDirection: "column" }}>
+          select your favorite city in syria:
+          <span>
+            Damascus:
+            <input
+              type="radio"
+              name="city"
+              value="Damascus"
+              checked={formInput.city === "Damascus"}
+              onChange={(e) =>
+                setFormInput({ ...formInput, city: e.target.value })
+              }
+            />
+          </span>
+          <span>
+            Aleppo:
+            <input
+              type="radio"
+              name="city"
+              value="Aleppo"
+              checked={formInput.city === "Aleppo"}
+              onChange={(e) =>
+                setFormInput({ ...formInput, city: e.target.value })
+              }
+            />
+          </span>
+          <span>
+            Daraa:
+            <input
+              type="radio"
+              name="city"
+              value="Daraa"
+              checked={formInput.city === "Daraa"}
+              onChange={(e) =>
+                setFormInput({ ...formInput, city: e.target.value })
+              }
+            />
+          </span>
         </label>
-
-      <hr />
-
         <button style={{ width: "100px", marginTop: "10px" }} type="submit">
           Submit
         </button>
