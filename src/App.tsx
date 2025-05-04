@@ -5,6 +5,7 @@ import TagButton from "./components/TagButton";
 import MyButton from "./components/MyButton";
 import MyInput from "./components/MyInput";
 import MyForm from "./components/MyForm";
+import TodoList from "./components/TodoList";
 //import Challenge from "./components/Challenge";
 
 const articles = [
@@ -75,7 +76,7 @@ function App() {
     <div className="App">
       <Header title="El-SooN.." />
       <div className="container">
-        <div className="articles">
+        {/* <div className="articles">
           {articles.map((article, index) => (
             <Article
               key={index}
@@ -109,10 +110,11 @@ function App() {
               <MyForm />
             </>
           </div>
-        </div>
-        {/* <div className="articles">
-        <Challenge />
-      </div> */}
+        </div> */}
+        <div className="articles">
+        {/* <Challenge /> */}
+        <TodoList/>
+      </div>
       </div>
    
     </div>
