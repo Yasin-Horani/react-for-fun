@@ -1,27 +1,41 @@
-import { use, useState } from "react";
-
+import React, { useState } from "react";
+let nextId = 4; // Initialize nextId to 4
 function TodoList() {
   const [taskInputValue, setTaskInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  const tasksList = tasks.map((task) => {
-    return <li>{task}</li>;
-  });
-
   function handleAddTask() {
-    setTasks([...tasks, taskInputValue]);
+    if (taskInputValue.trim() === "") return;
+    setTasks([...tasks, { id: nextId, taskName: taskInputValue }]);
+    nextId++;
     setTaskInputValue("");
   }
 
+  function handleInputChange(e) {
+    setTaskInputValue(e.target.value);
+  }
+  function handleDeleteClick(id) {
+    const newTasks = tasks.filter((task) => task.id !== id);
+    setTasks(newTasks);
+  }
+
+  const tasksList = tasks.map((task) => (
+    <React.Fragment key={task.id}>
+      <li>
+        {task.taskName}{".............."}
+        <button onClick={() => handleDeleteClick(task.id)}>Delete</button>
+      </li>
+      <hr />
+    </React.Fragment>
+  ));
+
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <h1>add new task</h1>
       <input
         type="text"
         value={taskInputValue}
-        onChange={(e) => {
-          setTaskInputValue(e.target.value);
-        }}
+        onChange={handleInputChange}
         placeholder="Enter a new task"
       />
       <button onClick={handleAddTask}>Add</button>
