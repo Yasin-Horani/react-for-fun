@@ -5,6 +5,7 @@ import TagButton from "./components/TagButton";
 import MyButton from "./components/MyButton";
 import MyInput from "./components/MyInput";
 import MyForm from "./components/MyForm";
+//import Challenge from "./components/Challenge";
 
 const articles = [
   {
@@ -86,6 +87,7 @@ function App() {
             />
           ))}
         </div>
+
         <div className="buttons">
           {buttons.map((button) => (
             <TagButton
@@ -99,7 +101,7 @@ function App() {
             <>
               <MyButton />
             </>
-  
+
             <>
               <MyInput />
             </>
@@ -108,7 +110,11 @@ function App() {
             </>
           </div>
         </div>
+        {/* <div className="articles">
+        <Challenge />
+      </div> */}
       </div>
+   
     </div>
   );
 }
