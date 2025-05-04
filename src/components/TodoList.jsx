@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-let nextId = 4; // Initialize nextId to 4
+let nextId = 1; // Initialize nextId to 4
 function TodoList() {
   const [taskInputValue, setTaskInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
@@ -18,12 +18,26 @@ function TodoList() {
     const newTasks = tasks.filter((task) => task.id !== id);
     setTasks(newTasks);
   }
+  function handleEditClick(id) {
+    const taskToEdit = tasks.find((task) => task.id === id);
+    if (taskToEdit) {
+      const newTaskName = prompt("Edit task name:", taskToEdit.taskName);
+      if (newTaskName !== null && newTaskName.trim() !== "") {
+        const updatedTasks = tasks.map((task) =>
+          task.id === id ? { ...task, taskName: newTaskName } : task
+        );
+        setTasks(updatedTasks);
+      }
+    }
+  }
 
   const tasksList = tasks.map((task) => (
     <React.Fragment key={task.id}>
       <li>
-        {task.taskName}{".............."}
+        {task.taskName}
+        {".............."}
         <button onClick={() => handleDeleteClick(task.id)}>Delete</button>
+        <button onClick={() => handleEditClick(task.id)}>Edit</button>
       </li>
       <hr />
     </React.Fragment>
