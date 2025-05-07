@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-let nextId = 1; // Initialize nextId to 4
+let nextId = 1; // Initialize nextId to 1
 function TodoList() {
   const [taskInputValue, setTaskInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
