@@ -35,7 +35,7 @@ function TodoList() {
     <React.Fragment key={task.id}>
       <li>
         {task.taskName}
-        {"............."}
+        {"-----------"}
         <button onClick={() => handleDeleteClick(task.id)}>Delete</button>
         <button onClick={() => handleEditClick(task.id)}>Edit</button>
       </li>
