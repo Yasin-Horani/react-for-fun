@@ -44,7 +44,6 @@ function Challenge() {
         <input value={player.lastName} onChange={handleLastNameChange} />
       </label>
     </>
-    // This will log the player object to the console whenever it changes;
   );
 }
 
